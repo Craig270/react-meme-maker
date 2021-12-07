@@ -1,0 +1,45 @@
+$myColor: #ff5a5f;
+$myWhite: #ffffffff;
+$startColor: #672280;
+$endColor: #a626d3;
+
+* {
+  box-sizing: border-box;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 35px;
+  color: $myWhite;
+  background-image: linear-gradient(to right, $startColor, $endColor);
+
+  .header_left {
+    display: flex;
+    h1 {
+      margin-left: 10px;
+    }
+  }
+}
+main {
+  padding: 36px;
+}
+.menu_form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+  .menu_input {
+    border-radius: 5px;
+    border: 2px solid #d5d4d8;
+    text-indent: 5px;
+  }
+  button {
+    grid-column: 1 /-1;
+    background-image: linear-gradient(to right, $startColor, $endColor);
+    border: none;
+    border-radius: 5px;
+    color: $myWhite;
+    font-size: 20px;
+  }
+}

@@ -1,1 +1,60 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 35px;
+  color: #ffffffff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#672280), to(#a626d3));
+  background-image: linear-gradient(to right, #672280, #a626d3);
+}
+
+.header_container .header_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_container .header_left h1 {
+  margin-left: 10px;
+}
+
+main {
+  padding: 36px;
+}
+
+.menu_form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 40px 40px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+
+.menu_form .menu_input {
+  border-radius: 5px;
+  border: 2px solid #d5d4d8;
+  text-indent: 5px;
+}
+
+.menu_form button {
+  grid-column: 1 /-1;
+  background-image: -webkit-gradient(linear, left top, right top, from(#672280), to(#a626d3));
+  background-image: linear-gradient(to right, #672280, #a626d3);
+  border: none;
+  border-radius: 5px;
+  color: #ffffffff;
+  font-size: 20px;
+}
+/*# sourceMappingURL=index.css.map */
