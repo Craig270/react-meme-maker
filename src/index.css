@@ -56,5 +56,16 @@ main {
   border-radius: 5px;
   color: #ffffffff;
   font-size: 20px;
+  cursor: pointer;
+}
+
+.menu_form img {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=index.css.map */

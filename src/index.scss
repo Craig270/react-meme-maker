@@ -6,7 +6,7 @@ $endColor: #a626d3;
 * {
   box-sizing: border-box;
 }
-
+//Header Comp
 .header_container {
   display: flex;
   justify-content: space-between;
@@ -41,5 +41,12 @@ main {
     border-radius: 5px;
     color: $myWhite;
     font-size: 20px;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
