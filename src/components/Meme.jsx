@@ -4,8 +4,8 @@ import memesData from "../memesData";
 export default function Meme() {
   //Setting up the starting image when the page loads
   const [meme, setMeme] = React.useState({
-    topText: "#",
-    bottomText: "#",
+    topText: "",
+    bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg",
   });
   const [allMemeImages, setAllMemeImages] = React.useState(memesData);
@@ -18,18 +18,42 @@ export default function Meme() {
       randomImage: memesArray[randNumb].url,
     }));
   }
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setMeme((prevState) => {
+      return {
+        ...prevState,
+        [name]: value,
+      };
+    });
+  }
   return (
     <main>
       <div className="menu_form">
-        <input className="menu_input_top" placeholder="Top Text" type="text" />
+        <input
+          className="menu_input_top"
+          placeholder="Top Text"
+          type="text"
+          name="topText"
+          value={meme.topText}
+          onChange={handleChange}
+        />
         <input
           className="menu_input_bottom"
           placeholder="Bottom Text"
           type="text"
+          name="bottomText"
+          value={meme.bottomText}
+          onChange={handleChange}
         />
         <button onClick={getMemeImage}>Get a new meme image 😹</button>
       </div>
-      <img src={meme.randomImage} />
+      <div className="meme">
+        <img src={meme.randomImage} className="meme--image" />
+        <h2 className="meme--text top">{meme.topText}</h2>
+        <h2 className="meme--text bottom">{meme.bottomText}</h2>
+      </div>
     </main>
   );
 }
