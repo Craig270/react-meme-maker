@@ -16,11 +16,11 @@ export default function Meme() {
   });
   //Function used to get random image while including all prvious data from the old object, and changing the desired changes in the second parameter
   function getMemeImage() {
-    const memesArray = allMemeImages.data.memes;
-    const randNumb = Math.floor(Math.random() * memesArray.length);
+    const randNumb = Math.floor(Math.random() * allMemeImages.length);
+    const url = allMemeImages[randNumb].url;
     setMeme((prevMeme) => ({
       ...prevMeme,
-      randomImage: memesArray[randNumb].url,
+      randomImage: url,
     }));
   }
 
