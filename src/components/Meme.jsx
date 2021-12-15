@@ -1,5 +1,4 @@
 import React from "react";
-import memesData from "../memesData";
 
 export default function Meme() {
   //Setting up the starting image when the page loads
@@ -8,7 +7,13 @@ export default function Meme() {
     bottomText: "",
     randomImage: "http://i.imgflip.com/1bij.jpg",
   });
-  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+  const [allMemeImages, setAllMemeImages] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch(`https://api.imgflip.com/get_memes`)
+      .then((res) => res.json())
+      .then((data) => setAllMemeImages(data.data.memes), []);
+  });
   //Function used to get random image while including all prvious data from the old object, and changing the desired changes in the second parameter
   function getMemeImage() {
     const memesArray = allMemeImages.data.memes;
